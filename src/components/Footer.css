@@ -1,0 +1,44 @@
+div {
+    display: block;
+}
+
+.pre-footer {
+    background-color: #f1f2f2;
+}
+
+.pre-footer-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height:75px;
+}
+
+footer {
+    background-color: #6a625c;
+}
+.inner-footer{
+    padding: 64px 32px;
+    box-sizing: border-box;
+}
+
+.site-info{
+    margin-left: 2em;
+    text-align: center;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: 200;
+    font-style: normal;
+    font-size: 14px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: rgba(255,255,255,.9);
+}
+
+.site-email{
+    margin-left: 3em;
+}
+
+a {
+    text-decoration: none;
+    color: rgba(255,255,255,.9);
+}
