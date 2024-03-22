@@ -1,14 +1,20 @@
-import * as React from "react";
+import {useState} from "react";
 import { NavLink } from "react-router-dom";
 import "./Navbar.css";
 
 export default function Navbar() {
+  const [isOpen, setIsOpen] = useState(false);
   return (
     <header>
       <div className="navbar-logo">
         <img src="src\assets\logo.png" alt="vite" />
       </div>
-      <nav className="navbar-container">
+      <div className="hamburger" onClick={() => setIsOpen(!isOpen)}>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <nav className={`navbar-container ${isOpen ? 'open' : ''}`}>
         <ul className="navbar-links">
           <li>
             <NavLink to="/" exact activeClassName="active">
@@ -42,7 +48,7 @@ export default function Navbar() {
           </li>
           <li>
             <NavLink to="/contact" activeClassName="active">
-            CONTACT US
+              CONTACT US
             </NavLink>
           </li>
         </ul>

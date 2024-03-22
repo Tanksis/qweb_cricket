@@ -5,8 +5,10 @@
     background-image: url('src/assets/home_background.png');
     background-size: cover;
     background-position: center;
-
-
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
 }
 
 .overlay {
@@ -19,30 +21,20 @@
 }
 
 .content {
-    /* position: relative;
-    width: 100%;
-    max-width: 956px;
-    box-sizing: border-box;
-    margin: 0 auto;
-    padding: 130px;
-    text-align: center; */
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    position: relative;
+    z-index: 1;
     width: 100%;
     max-width: 956px;
     box-sizing: border-box;
     padding: 32px;
     text-align: center;
-
 }
 
 .title {
     display: block;
     font-weight: 400;
     font-style: normal;
-    font-size: 86px;
+    font-size: 6vw;
     letter-spacing: 2px;
     text-transform: none;
     line-height: 1.1em;
@@ -53,10 +45,50 @@
     font-family: "Helvetica Neue", "Arial", "sans-serif";
     font-weight: 400;
     font-style: normal;
-    font-size: 28px;
+    font-size: 1.5vw;
     letter-spacing: 4px;
     text-transform: uppercase;
     line-height: 1.3em;
     color: #d1d3d4;
     margin: 20px auto;
+}
+
+.main {
+    box-sizing: border-box;
+    width: auto;
+    margin: auto;
+    max-width: 1020px;
+    padding: 32px;
+}
+
+.about {
+    text-align: center;
+}
+
+.about p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    white-space: pre-wrap;
+}
+
+.about p a {
+    color: #fabd05;
+    text-decoration: none;
+}
+
+.about p a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+    .title {
+        font-size: 32px; 
+    }
+
+    .intro {
+        font-size: 16px; 
+    }
 }
