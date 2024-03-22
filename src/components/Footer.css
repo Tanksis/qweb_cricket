@@ -1,3 +1,7 @@
+
+* {
+    box-sizing: border-box;
+}
 div {
     display: block;
 }
@@ -10,7 +14,8 @@ div {
     display: flex;
     align-items: center;
     justify-content: center;
-    height:75px;
+    height:10vh;
+    min-height: 75px;
 }
 
 footer {
@@ -19,11 +24,10 @@ footer {
 .inner-footer{
     padding: 64px 32px;
     box-sizing: border-box;
+    text-align: center;
 }
 
 .site-info{
-    margin-left: 2em;
-    text-align: center;
     font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
     font-weight: 200;
     font-style: normal;
@@ -32,13 +36,32 @@ footer {
     text-transform: uppercase;
     text-decoration: none;
     color: rgba(255,255,255,.9);
-}
-
-.site-email{
-    margin-left: 3em;
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    white-space: pre-wrap;
 }
 
 a {
     text-decoration: none;
     color: rgba(255,255,255,.9);
 }
+
+a:hover {
+    text-decoration: underline;
+}
+
+.site-email {
+    padding-left: 10px;
+    word-wrap: break-word;
+}
+
+@media (max-width: 600px) {
+    .site-email{
+        padding-left: 0;
+        display: block;
+    }
+}
+

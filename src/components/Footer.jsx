@@ -19,8 +19,10 @@ export default function Footer() {
             <footer>
                 <div className="inner-footer">
                     <div className="site-info">
-                        <span>Kingston, Ontario, Canada</span>
-                        <a href="mailto:cricketclubqueens@gmail.com" className="site-email">cricketclubqueens@gmail.com</a>
+                        <span>
+                            Kingston, Ontario, Canada
+                            <a href="mailto:cricketclubqueens@gmail.com" className="site-email">cricketclubqueens@gmail.com</a>
+                        </span>
                     </div>
                 </div>
             </footer>
