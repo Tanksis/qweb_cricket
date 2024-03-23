@@ -7,22 +7,22 @@ div {
 }
 
 .pre-footer {
-    background-color: #f1f2f2;
+    background-color: #908982;
 }
 
 .pre-footer-container {
     display: flex;
     align-items: center;
     justify-content: center;
-    height:10vh;
-    min-height: 75px;
+    height:6vh;
+    min-height: 50px;
 }
 
 footer {
     background-color: #6a625c;
 }
 .inner-footer{
-    padding: 64px 32px;
+    padding: 30px 32px;
     box-sizing: border-box;
     text-align: center;
 }
@@ -32,7 +32,7 @@ footer {
     font-weight: 200;
     font-style: normal;
     font-size: 14px;
-    letter-spacing: 5px;
+    letter-spacing: 3px;
     text-transform: uppercase;
     text-decoration: none;
     color: rgba(255,255,255,.9);

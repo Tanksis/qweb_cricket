@@ -53,36 +53,6 @@
     margin: 20px auto;
 }
 
-.main {
-    box-sizing: border-box;
-    width: auto;
-    margin: auto;
-    max-width: 1020px;
-    padding: 32px;
-}
-
-.about {
-    text-align: center;
-}
-
-.about p {
-    display: block;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    white-space: pre-wrap;
-}
-
-.about p a {
-    color: #fabd05;
-    text-decoration: none;
-}
-
-.about p a:hover {
-    text-decoration: underline;
-}
-
 @media (max-width: 600px) {
     .title {
         font-size: 32px; 

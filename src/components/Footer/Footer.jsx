@@ -11,9 +11,9 @@ export default function Footer() {
         <div>
             <div className="pre-footer">
                 <div className="pre-footer-container">
-                    <SocialIcon url="https://www.instagram.com/queens_cricket" fgColor="black" bgColor="#f0f0f0" />
-                    <SocialIcon url="https://www.twitter.com" fgColor="black" bgColor="#f0f0f0" />
-                    <SocialIcon url="mailto:cricketclubqueens@gmail.com" fgColor="black" bgColor="#f0f0f0" />
+                    <SocialIcon url="https://www.instagram.com/queens_cricket" fgColor="#f1f2f2" bgColor="#908982" />
+                    <SocialIcon url="https://www.twitter.com" fgColor="#f1f2f2" bgColor="#908982" />
+                    <SocialIcon url="mailto:cricketclubqueens@gmail.com" fgColor="#f1f2f2" bgColor="#908982" />
                 </div>
             </div>
             <footer>
@@ -26,6 +26,7 @@ export default function Footer() {
                     </div>
                 </div>
             </footer>
+            
         </div>
     );
 }
