@@ -8,7 +8,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  box-shadow: 0 8px 8px #fabd05;
+  box-shadow: 0 1px 1px #fabd05;
   border-bottom: 1.5px solid #fabd05;
   width: 100%;
 }
