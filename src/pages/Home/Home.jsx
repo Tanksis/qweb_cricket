@@ -1,4 +1,3 @@
-import React from 'react'
 import './Home.css'
 import AboutSection from '../../components/AboutSection/AboutSection'
 

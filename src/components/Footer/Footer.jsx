@@ -9,6 +9,7 @@ import 'react-social-icons/mailto'
 export default function Footer() {
     return (
         <div>
+            {/* footer for social media, no twitter given yet */}
             <div className="pre-footer">
                 <div className="pre-footer-container">
                     <SocialIcon url="https://www.instagram.com/queens_cricket" fgColor="#f1f2f2" bgColor="#908982" />
@@ -16,6 +17,7 @@ export default function Footer() {
                     <SocialIcon url="mailto:cricketclubqueens@gmail.com" fgColor="#f1f2f2" bgColor="#908982" />
                 </div>
             </div>
+            {/* footer for rest of info */}
             <footer>
                 <div className="inner-footer">
                     <div className="site-info">

@@ -6,14 +6,17 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <header>
+      {/* cricket club logo */}
       <div className="navbar-logo">
         <img src="src\assets\logo.png" alt="vite" />
       </div>
+      {/* Incomplete hamburger menu for phone screens */}
       <div className="hamburger" onClick={() => setIsOpen(!isOpen)}>
         <div></div>
         <div></div>
         <div></div>
       </div>
+      {/* Navbar links when on larger screen sizes, directs to each page */}
       <nav className={`navbar-container ${isOpen ? 'open' : ''}`}>
         <ul className="navbar-links">
           <li>
