@@ -1,0 +1,51 @@
+  /* Form layout */
+  .contact-form form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Input field styling */
+  input[type="text"],
+  input[type="email"],
+  textarea {
+    width: 100%;
+    padding: 16px; /* Larger input fields for better readability */
+    margin: 10px 0;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+  }
+  
+  /* Textarea specific styles */
+  textarea {
+    height: 200px; /* Allows more content to be seen at once */
+    resize: vertical; /* Users can adjust the height */
+  }
+  
+  /* Button styling */
+  button {
+    background-color: #002452;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-top: 20px; /* Space above button */
+    width: 20%; /* Full width for default button */
+  }
+  
+  /* Name input layout */
+  .name-inputs {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px; /* Space between first name and last name fields */
+  }
+  
+  .name-inputs .first-name,
+  .name-inputs .last-name {
+    flex: 1; /* Equal width for both fields */
+    margin-top: 30px; /* Space below 'Name' label */
+  }
