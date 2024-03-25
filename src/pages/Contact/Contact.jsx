@@ -4,23 +4,6 @@ import { Link } from 'react-router-dom';
 import InputForm from '../../components/InputForm/InputForm';
 
 function Contact(){
-    const [formState, setFormState] = useState({
-        firstName: '',
-        lastName: '',
-        email: '',
-        message: '',
-      });
-    
-    const handleInputChange = (e) => {
-        const { name, value } = e.target;
-        setFormState({ ...formState, [name]: value });
-    };
-    
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        // Here you would handle the submission, e.g., using fetch() to POST to a backend
-        console.log(formState);
-    };
     
     return (
     <div className="contact-page-container">

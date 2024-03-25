@@ -1,4 +1,3 @@
-// this remain unused, I got too lazy so I use emailjs api instead.
 
 import express from 'express';
 import nodemailer from 'nodemailer';
