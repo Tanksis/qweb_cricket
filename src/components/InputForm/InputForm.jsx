@@ -1,5 +1,5 @@
 // captures user input through controlled form elements, managing state with React hooks and handling form submission
-import emailjs from 'emailjs-com';
+import axios from 'axios';
 import './InputForm.css';
 import React, { useState } from 'react';
 
@@ -10,13 +10,10 @@ function InputForm() {
         lastName: '',
         email: '',
         message: '',
-      });
-    
-    const handleInputChange = (e) => {
-        const { name, value } = e.target;
-        setFormState({ ...formState, [name]: value });
-    };
-    
+    });
+
+    const [result, setResult] = useState(null);
+
     const resetForm = () => {
         setFormState({
             firstName: '',
@@ -26,22 +23,43 @@ function InputForm() {
         });
     };
 
-    const handleSubmit = (e) => {
+
+    const sendEmail = (e) => {
         e.preventDefault();
-        emailjs.send('service_8x8zhy8', 'template_otjqla5', formState, 'LSrSuqMBWZVfXNsNx')
-            .then((result) => {
-                console.log(result.text);
-                alert("Message Sent, We will get back to you shortly", result.text);
+        axios
+            .post('http://localhost:3002/send', { ...formState })
+            .then((response) => {
+                if (response.data.status === 'success') {
+                    setResult({
+                        success: true,
+                        message: 'Your message has been sent!'
+                    });
+                } else {
+                    setResult({
+                        success: false,
+                        message: 'Something went wrong.'
+                    });
+                }
                 resetForm();
-            }, (error) => {
-                console.log(error.text);
-                alert("An error occurred, Please try again", error.text);
-        });
+            })
+            .catch(() => {
+                setResult({
+                    success: false,
+                    message: 'Something went wrong.'
+                });
+            });
     };
+
+    const handleInputChange = (e) => {
+        const { name, value } = e.target;
+        setFormState({ ...formState, [name]: value });
+    };
+
+
 
     return (
         <div className="contact-form">
-            <form onSubmit={handleSubmit}>
+            <form onSubmit={sendEmail}>
                 <label>Name (required)</label>
                 <div className="name-inputs">
                     <div className="first-name">
@@ -57,8 +75,14 @@ function InputForm() {
                 <input type="email" name="email" required onChange={handleInputChange} />
                 <label>Message (required)</label>
                 <textarea name="message" required onChange={handleInputChange}></textarea>
+                {result && (
+                    <p className={`${result.success ? 'success' : 'error'}`}>
+                        {result.message}
+                    </p>
+                )}
                 <button type="submit">Send</button>
             </form>
+
         </div>
     );
 }
