@@ -1,7 +1,6 @@
-import AboutSection from "../../components/AboutSection/AboutSection";
-import "./Gallery.css";
-import CloseIcon from "@material-ui/icons/Close";
 import React, { useState } from "react";
+import "./Gallery.css";
+
 import Img1 from "./Photos/img1.jpg";
 import Img2 from "./Photos/img2.jpg";
 import Img3 from "./Photos/img3.jpeg";
@@ -37,17 +36,35 @@ const Gallery = () => {
     },
   ];
   const [model, setModel] = useState(false);
-  const [tempingSrc, setTempImgSrc] = useState("");
+  const [tempImgSrc, setTempImgSrc] = useState("");
+  const [currentIndex, setCurrentIndex] = useState(0);
 
   const getImg = (imgSrc) => {
     setTempImgSrc(imgSrc);
     setModel(true);
   };
+
+  const closeModel = () => {
+    setModel(false);
+    setTempImgSrc("");
+  };
+  const nextImage = () => {
+    const nextIndex = (currentIndex + 1) % data.length;
+    setTempImgSrc(data[nextIndex].imgSrc);
+    setCurrentIndex(nextIndex);
+  };
+
   return (
     <>
+      <h1 style={{ textAlign: "center", margin: "20px 0" }}>Gallery</h1>
       <div className={model ? "model open" : "model"}>
-        <img src={tempingSrc} />
-        <CloseIcon onClick={() => setModel(false)} />
+        <button className="close-button" onClick={closeModel}>
+          &#10006; {/* Unicode for "times" symbol */}
+        </button>
+        <button className="next-button" onClick={nextImage}>
+          &gt;
+        </button>
+        <img src={tempImgSrc} className="fullscreen-img" />
       </div>
       <div className="gallery">
         {data.map((item, index) => {
@@ -57,7 +74,7 @@ const Gallery = () => {
               key={index}
               onClick={() => getImg(item.imgSrc)}
             >
-              <img src={item.imgSrc} style={{ width: "100" }} />
+              <img src={item.imgSrc} style={{ width: "100%" }} />
             </div>
           );
         })}

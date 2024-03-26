@@ -1,42 +1,39 @@
 .gallery {
-  -webkit-column-count: 3;
-  -moz-column-count: 3;
-  column-count: 3;
-  -webkit-column-width: 33%;
-  -moz-column-width: 33%;
-  column-width: 33%;
-  padding: 0 12px;
-}
-.gallery .Pictures {
-  -webkit-transition: all 350ms ease;
-  transition: all 350ms ease;
-  cursor: pointer;
-  margin-bottom: 12px;
-}
-.gallery .Pictures:hover {
-  filter: opacity(0.8);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 1px;
 }
 
-@media (max-width: 991px) {
-  .gallery {
-    -webkit-column-count: 2;
-    -moz-column-count: 2;
-    column-count: 2;
-  }
+.Pictures {
+  flex-basis: calc(
+    33.33% - 20px
+  ); /* 33.33% for three pictures per row, minus margin */
+  height: 200px; /* Fixed height for all images */
+  margin-bottom: 20px;
+  box-sizing: border-box; /* include padding and border in the width */
+  overflow: hidden; /* Hide any overflow to ensure consistent height */
 }
-/*model*/
 
-.model {
+.Pictures img {
   width: 100%;
-  height: 100vh;
+  height: 100%;
+  object-fit: cover; /* Resize the image to cover the container, preserving aspect ratio */
+  margin: 25px;
+}
+.model {
   position: fixed;
   top: 0;
   left: 0;
+  width: 100vw;
+  height: 100vh;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column;
+  align-items: flex-end; /* Align items to the right */
+  padding: 20px;
+  box-sizing: border-box;
   background-color: black;
-  transition: opacity 0.4s ease, visability 0.4s ease,
+  transition: opacity 0.4s ease, visibility 0.4s ease,
     transform 0.5s ease-in-out;
   visibility: hidden;
   opacity: 0;
@@ -45,43 +42,61 @@
   z-index: 999;
 }
 
-.model .open {
+.model.open {
   visibility: visible;
   opacity: 1;
   transform: scale(1);
 }
 
 .model img {
-  width: auto;
   max-width: 100%;
-  height: auto;
   max-height: 100%;
-  display: block;
-  line-height: 0;
-  box-sizing: border-box;
-  padding: 20px 0 20px;
-  margin: 0 auto;
+  object-fit: contain;
 }
 
-.model.open svg {
-  position: fixed;
-  top: 10px;
-  right: 10px;
-  width: 2rem;
-  height: 2rem;
-  padding: 5px;
-  background-color: black;
-  color: cornsilk;
+.close-button {
+  background-color: rgba(255, 255, 255, 0.5);
+  color: black;
+  border: none;
+  padding: 4px; /* Adjust padding as needed */
   cursor: pointer;
+  position: absolute;
+  top: 10px; /* Adjust position as needed */
+  right: 30px; /* Adjust position as needed */
+  width: 24px; /* Set width and height to create a circle */
+  height: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem; /* Adjust font size as needed */
+  border-radius: 50%; /* Make the button a circle */
+  transition: background-color 0.3s;
 }
-.model.open svg {
-  position: fixed;
-  top: 10px;
+
+.close-button:hover {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.fullscreen-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.next-button {
+  position: absolute;
+  top: 50%;
   right: 10px;
-  width: 2rem;
-  height: 2rem;
-  padding: 5px;
-  background-color: black;
-  color: white;
+  transform: translateY(-50%);
+  background-color: rgba(255, 255, 255, 0);
+  color: rgb(255, 255, 255, 55, 255, 255);
+  border: none;
+  padding: 4px;
   cursor: pointer;
+  font-size: 1.5rem;
+  border-radius: 50%;
+  transition: background-color 0.3s;
+}
+
+.next-button:hover {
+  background-color: rgba(255, 255, 255, 0.8);
 }
