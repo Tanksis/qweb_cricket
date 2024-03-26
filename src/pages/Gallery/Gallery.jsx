@@ -1,6 +1,7 @@
 import AboutSection from "../../components/AboutSection/AboutSection";
 import "./Gallery.css";
-import React from "react";
+import CloseIcon from "@material-ui/icons/Close";
+import React, { useState } from "react";
 import Img1 from "./Photos/img1.jpg";
 import Img2 from "./Photos/img2.jpg";
 import Img3 from "./Photos/img3.jpeg";
@@ -35,25 +36,28 @@ const Gallery = () => {
       imgSrc: Img6,
     },
   ];
+  const [model, setModel] = useState(false);
+  const [tempingSrc, setTempImgSrc] = useState("");
 
+  const getImg = (imgSrc) => {
+    setTempImgSrc(imgSrc);
+    setModel(true);
+  };
   return (
     <>
-      <h1 style={{ textAlign: "center" }}>Gallery</h1>
-    </>
-  );
-
-  return (
-    <div className="about-sections">
-      <AboutSection title={title} content={content} />
-    </div>
-  );
-  return (
-    <>
+      <div className={model ? "model open" : "model"}>
+        <img src={tempingSrc} />
+        <CloseIcon onClick={() => setModel(false)} />
+      </div>
       <div className="gallery">
         {data.map((item, index) => {
           return (
-            <div className="Pictures" key={index}>
-              <img src={p.imgSrc} />
+            <div
+              className="Pictures"
+              key={index}
+              onClick={() => getImg(item.imgSrc)}
+            >
+              <img src={item.imgSrc} style={{ width: "100" }} />
             </div>
           );
         })}
