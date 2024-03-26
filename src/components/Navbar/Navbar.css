@@ -70,18 +70,6 @@ nav a:hover {
   color: #fabd0f;
 }
 
-.hamburger {
-  display: none;
-  cursor: pointer;
-}
-
-.hamburger div {
-  width: 25px;
-  height: 3px;
-  background-color: #fabd0f;
-  margin: 5px;
-}
-
 @media (max-width: 768px) {
   .hamburger {
     display: block;
@@ -110,3 +98,4 @@ nav a:hover {
 .navbar-container.open{
   display: flex;
 }
+
