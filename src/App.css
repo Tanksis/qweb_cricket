@@ -23,3 +23,8 @@ p {
   line-height: 1.1em;
   color: #000;
 }
+
+* {
+  box-sizing: border-box;
+}
+
