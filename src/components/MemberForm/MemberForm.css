@@ -1,0 +1,10 @@
+
+.member-form form {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  border-style: ridge;
+}
+
+
+

@@ -1,15 +1,16 @@
 // captures user input through controlled form elements, managing state with React hooks and handling form submission
 import axios from 'axios';
-import './InputForm.css';
+import './MemberForm.css';
 import React, { useState } from 'react';
 
-function InputForm() {
+function MemberForm() {
 
     const [formState, setFormState] = useState({
         firstName: '',
         lastName: '',
+        uniName: '',
+        studentNum: '',
         email: '',
-        message: '',
     });
 
     const [result, setResult] = useState(null);
@@ -18,8 +19,9 @@ function InputForm() {
         setFormState({
             firstName: '',
             lastName: '',
+            uniName: '',
+            studentNum: '',
             email: '',
-            message: '',
         });
     };
 
@@ -58,8 +60,9 @@ function InputForm() {
 
 
     return (
-        <div className="contact-form">
+        <div className="member-form">
             <form onSubmit={sendEmail}>
+                <div className='member-header'><h3>Become a Member - Register here</h3></div>
                 <div className="name-inputs">
                     <div className="first-name">
                         <label>First Name (required)</label>
@@ -70,20 +73,22 @@ function InputForm() {
                         <input type="text" name="lastName" required onChange={handleInputChange} />
                     </div>
                 </div>
+                <label>University or College name</label>
+                <input type="text" name="uniName" required onChange={handleInputChange} />
+                <label>Student ID (If applicable)</label>
+                <input type="text" name="studentNum" required onChange={handleInputChange} />
                 <label>Email (required)</label>
                 <input type="email" name="email" required onChange={handleInputChange} />
-                <label>Message (required)</label>
-                <textarea name="message" required onChange={handleInputChange}></textarea>
                 {result && (
                     <p className={`${result.success ? 'success' : 'error'}`}>
                         {result.message}
                     </p>
                 )}
-                <button type="submit">Send</button>
+                <button type="submit">Register</button>
             </form>
 
         </div>
     );
 }
 
-export default InputForm;
+export default MemberForm;

@@ -4,6 +4,12 @@ import { Link } from 'react-router-dom';
 import InputForm from '../../components/InputForm/InputForm';
 
 function Contact() {
+    const fields = [
+        { name: 'name', label: 'First Name', type: 'text' },
+        { name: 'lastName', label: 'Last Name', type: 'text' },
+        { name: 'email', label: 'Email', type: 'email' },
+        { name: 'message', label: 'Message', type: 'text' },
+      ];
 
     return (
         <div className="contact-page-container">
