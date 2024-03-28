@@ -13,8 +13,8 @@ function Contact() {
 
     return (
         <div className="contact-page-container">
+            <div className="contact-header">CONTACT US</div>
             <div className="contact-page-left">
-                <div className="contact-header">CONTACT US</div>
                 <div className="team-exec-container">
                     <div>
                         <div className="team-exec-name">EXEC</div>

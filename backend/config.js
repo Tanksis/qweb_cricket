@@ -1,13 +1,15 @@
 import nodemailer from 'nodemailer';
 import dotenv from 'dotenv';
 
-dotenv.config();
+dotenv.config({ path:'../.env' });
+console.log(process.env.email); // Should output the email if correctly loaded(for testing)
+console.log(process.env.password); // Should output the password if correctly loaded(for testing) 
 
 // Email configuration
 const transporter = nodemailer.createTransport({
-    host: 'smtp.gmail.com',
-    port: 587,
+    service: 'gmail',
     auth: {
+        type: 'login',
         user: process.env.email,
         pass: process.env.password
     }

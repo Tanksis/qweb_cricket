@@ -3,10 +3,9 @@ import express from 'express';
 import nodemailer from 'nodemailer';
 import cors from 'cors';
 import dotenv from 'dotenv';
-dotenv.config();
+dotenv.config({ path:'../.env' }); // really important to specify the path or else it just doesn't work
 
 import {transporter}from './config.js';
-
 
 const app = express();
 app.use(cors());
