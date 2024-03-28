@@ -1,5 +1,6 @@
-import "./Home.css";
-import AboutSection from "../../components/AboutSection/AboutSection";
+import './Home.css'
+import AboutSection from '../../components/AboutSection/AboutSection'
+import MemberForm from '../../components/MemberForm/MemberForm';
 
 function Home() {
   const title = "About Us";
@@ -31,6 +32,7 @@ function Home() {
         </div>
       </div>
       <AboutSection title={title} content={content} />
+      <MemberForm />
     </>
   );
 }
