@@ -60,7 +60,6 @@ function InputForm() {
     return (
         <div className="contact-form">
             <form onSubmit={sendEmail}>
-                <label>Name (required)</label>
                 <div className="name-inputs">
                     <div className="first-name">
                         <label>First Name (required)</label>

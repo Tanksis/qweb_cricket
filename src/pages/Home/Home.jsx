@@ -1,6 +1,6 @@
-import './Home.css'
-import AboutSection from '../../components/AboutSection/AboutSection'
-import MemberForm from '../../components/MemberForm/MemberForm';
+import "./Home.css";
+import AboutSection from "../../components/AboutSection/AboutSection";
+import MemberForm from "../../components/MemberForm/MemberForm";
 
 function Home() {
   const title = "About Us";
@@ -32,7 +32,11 @@ function Home() {
         </div>
       </div>
       <AboutSection title={title} content={content} />
-      <MemberForm />
+      <div className="reg-box">
+        <AboutSection title={'temporary about section'} content={[{text:'image will be located here'}]} />
+        <MemberForm />
+      </div>
+      
     </>
   );
 }

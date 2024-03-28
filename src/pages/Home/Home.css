@@ -53,6 +53,19 @@
     margin: 20px auto;
 }
 
+.reg-box {
+    display:flex;
+   flex-direction: row;
+    justify-content: space-between;
+    padding: 0 20px;
+    padding-bottom: 10px;
+    margin: 0 auto;
+}
+
+.reg-box > * {
+    margin-bottom: 10px; /* Add space between items on mobile */
+}
+
 @media (max-width: 600px) {
     .title {
         font-size: 32px; 
@@ -61,4 +74,11 @@
     .intro {
         font-size: 16px; 
     }
+
+    .reg-box {
+        flex-direction: column; /* Arrange items horizontally on larger screens */
+        justify-content: center;
+    
+    }
+
 }
