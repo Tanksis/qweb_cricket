@@ -28,7 +28,6 @@ p {
   box-sizing: border-box;
 }
 
-
 label {
   font-family: "Helvetica Neue", "Arial", "sans-serif";
   font-weight: 200;
@@ -38,4 +37,3 @@ label {
   line-height: 1.1em;
   color: #000;
 }
-

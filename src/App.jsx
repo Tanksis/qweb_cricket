@@ -11,14 +11,18 @@ function App() {
   return (
     <div style={{height: '100%'}}>
     <Router>
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/involved" element={<Member />} />
-      </Routes>
-      <Footer />
+      <div id="outer-container" style={{height: '100%'}}>
+        <Navbar />
+        <div id="page-wrap" style={{height: '100%', overflow: 'auto'}}>
+          <Routes >
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/involved" element={<Member />} />
+          </Routes>
+        </div>
+        <Footer />
+      </div>
     </Router>
     </div>
   );
