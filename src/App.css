@@ -23,3 +23,17 @@ p {
   line-height: 1.1em;
   color: #000;
 }
+
+* {
+  box-sizing: border-box;
+}
+
+label {
+  font-family: "Helvetica Neue", "Arial", "sans-serif";
+  font-weight: 200;
+  font-style: normal;
+  font-size: 16px;
+  letter-spacing: .5px;
+  line-height: 1.1em;
+  color: #000;
+}

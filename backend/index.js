@@ -18,8 +18,8 @@ app.post('/send', (req, res) => {
     const content = `name: ${firstName} ${lastName} \n email: ${email} \n message: ${message} `;
 
     const mail = {
-        from: req.body.email, // Sender email address
-        to: process.env.email, // Recipient email address
+        from: req.body.email, 
+        to: process.env.email, 
         subject: 'New Message from Contact Form',
         text: content
     };
