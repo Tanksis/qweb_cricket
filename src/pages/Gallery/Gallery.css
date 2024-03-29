@@ -6,20 +6,22 @@
 }
 
 .Pictures {
-  flex-basis: calc(
-    33.33% - 20px
-  ); /* 33.33% for three pictures per row, minus margin */
-  height: 200px; /* Fixed height for all images */
+  flex-basis: calc(33.33% - 20px);
+  height: 200px;
   margin-bottom: 20px;
-  box-sizing: border-box; /* include padding and border in the width */
-  overflow: hidden; /* Hide any overflow to ensure consistent height */
+  box-sizing: border-box;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+  border: 2px solid rgb(250, 189, 15); /* Add a gold border */
 }
 
 .Pictures img {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Resize the image to cover the container, preserving aspect ratio */
-  margin: 25px;
+  object-fit: cover;
 }
 .model {
   position: fixed;
@@ -29,7 +31,7 @@
   height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: flex-end; /* Align items to the right */
+  align-items: flex-end;
   padding: 20px;
   box-sizing: border-box;
   background-color: black;
@@ -85,18 +87,40 @@
 .next-button {
   position: absolute;
   top: 50%;
-  right: 10px;
+  right: 5%;
+  width: 100px; /* Set width and height to create a circle */
+  height: 100px;
   transform: translateY(-50%);
   background-color: rgba(255, 255, 255, 0);
-  color: rgb(255, 255, 255, 55, 255, 255);
+  color: rgba(255, 255, 255, 0.685);
   border: none;
-  padding: 4px;
+  padding: 1px;
   cursor: pointer;
-  font-size: 1.5rem;
-  border-radius: 50%;
+  font-size: 3rem;
+  border-radius: 100%;
   transition: background-color 0.3s;
 }
 
 .next-button:hover {
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(255, 255, 255, 0.5);
+}
+.prev-button {
+  position: absolute;
+  top: 50%;
+  left: 5%;
+  width: 100px; /* Set width and height to create a circle */
+  height: 100px;
+  transform: translateY(-50%);
+  background-color: rgba(255, 255, 255, 0);
+  color: rgba(255, 255, 255, 0.685);
+  border: none;
+  padding: 1px;
+  cursor: pointer;
+  font-size: 3rem;
+  border-radius: 100%;
+  transition: background-color 0.3s;
+}
+
+.prev-button:hover {
+  background-color: rgba(255, 255, 255, 0.5);
 }

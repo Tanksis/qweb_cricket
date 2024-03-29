@@ -53,10 +53,30 @@ const Gallery = () => {
     setTempImgSrc(data[nextIndex].imgSrc);
     setCurrentIndex(nextIndex);
   };
+  const previousImage = () => {
+    const previousIndex = (currentIndex - 1 + data.length) % data.length;
+    setTempImgSrc(data[previousIndex].imgSrc);
+    setCurrentIndex(previousIndex);
+  };
 
   return (
     <>
-      <h1 style={{ textAlign: "center", margin: "20px 0" }}>Gallery</h1>
+      <h1
+        style={{
+          textAlign: "center",
+          margin: "20px 0",
+          fontFamily: "Helvetica Neue, Arial, sans-serif",
+          color: "#b90e31",
+          fontWeight: 400,
+          fontStyle: "normal",
+          fontSize: "18px",
+          letterSpacing: "4px",
+          textTransform: "uppercase",
+          lineHeight: "1.3em",
+        }}
+      >
+        Photo Gallery
+      </h1>
       <div className={model ? "model open" : "model"}>
         <button className="close-button" onClick={closeModel}>
           &#10006; {/* Unicode for "times" symbol */}
@@ -64,6 +84,10 @@ const Gallery = () => {
         <button className="next-button" onClick={nextImage}>
           &gt;
         </button>
+        <button className="prev-button" onClick={previousImage}>
+          &lt;
+        </button>
+
         <img src={tempImgSrc} className="fullscreen-img" />
       </div>
       <div className="gallery">
