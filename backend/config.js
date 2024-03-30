@@ -1,3 +1,4 @@
+//create transporter for sending mail
 import nodemailer from 'nodemailer';
 import dotenv from 'dotenv';
 
