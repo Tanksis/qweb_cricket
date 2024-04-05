@@ -1,0 +1,50 @@
+.matches-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.matches {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.match-container {
+  border: 1px solid #ccc;
+  margin: 10px;
+  padding: 10px;
+}
+
+.match-details-box {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-top: 20px;
+  width: 600px; /* Adjust the width as needed */
+}
+
+.match-details {
+  width: 100%;
+}
+
+.match-details th {
+  background-color: #f2f2f2;
+  padding: 8px;
+  text-align: left;
+}
+
+.match-details td {
+  padding: 8px;
+  text-align: left;
+}
+
+.match-details td:first-child {
+  font-weight: bold;
+  text-align: right;
+  padding-right: 20px;
+  width: 150px; /* Adjust the width as needed */
+}
+
+.match-details td:last-child {
+  padding-left: 20px; /* Adjust the padding as needed */
+}
