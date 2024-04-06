@@ -87,7 +87,7 @@ const ScorecardModal = ({ onClose, matchData }) => {
   );
 };
 
-
+// match info display on matches page
 const MatchInfo = ({ matchData }) => {
   const [showScorecard, setShowScorecard] = useState(false);
 
@@ -120,7 +120,7 @@ const MatchInfo = ({ matchData }) => {
   );
 };
 
-
+// http request
 const MatchSchedule = () => {
   const [matches, setMatches] = useState([]);
 
@@ -137,6 +137,7 @@ const MatchSchedule = () => {
     fetchMatches();
   }, []);
 
+  
   return (
     <div className="big-box-container">
       {matches.length > 0 ? (

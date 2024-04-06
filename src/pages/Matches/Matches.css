@@ -1,6 +1,7 @@
 /* Add your CSS styles here */
 * {
   color: white;
+  box-sizing: border-box;
 }
 .big-box-container {
   display: flex;
@@ -215,4 +216,75 @@ th {
 }
 h2,h3,h4{
   color: black;
+}
+
+/* Media queries for responsiveness */
+@media only screen and (max-width: 600px) {
+  .big-box {
+    width: 95%; /* Take up almost full width on smaller screens */
+    margin: 10px 0; /* More vertical margin for each match */
+    padding: 10px; /* Add some padding inside the boxes */
+  }
+
+  .match-schedule-container,
+  .team-logos-box,
+  .team-logos,
+  .match-info-box {
+    flex-direction: column; /* Stack elements vertically on small screens */
+  }
+
+  .team-logo {
+    width: 100px; /* Smaller logos on mobile */
+    height: 100px;
+  }
+
+  .match-info-line, .league-info, .teams-info, .round-info, .ground-info, .result-info {
+    font-size: 14px; /* Smaller text on mobile */
+  }
+
+  .match-info-buttons {
+    position: static; /* Undo absolute positioning on mobile */
+    margin-top: 10px; /* Space above the button */
+  }
+
+  .scorecard-button {
+    width: auto; /* Let the button size according to its content */
+    padding: 10px 20px; /* Smaller padding on mobile */
+  }
+
+  .modal-content {
+    width: 90%; /* Modal should take up most of the screen width on mobile */
+    max-height: none; /* Allow modal to take necessary height */
+  }
+  
+  .match-line.date {
+    font-size: 300%; /* Smaller date size on mobile */
+  }
+  
+  .team-logos .vs-text {
+    font-size: 18px; /* Smaller VS text on mobile */
+  }
+
+  table {
+    font-size: 12px; /* Smaller table text on mobile */
+  }
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 600px) {
+  .modal-content {
+    width: 85%; /* Slightly more margin on the smallest screens */
+    padding: 10px; /* Reduce padding to save space */
+  }
+
+  .modal {
+    padding-top: 10px; /* Less space on the very top on small screens */
+  }
+}
+
+/* Adjustments for medium screens, e.g., tablets */
+@media (min-width: 601px) and (max-width: 1024px) {
+  .modal-content {
+    max-width: 80%; /* Allow more space around the modal on larger but not wide screens */
+  }
 }
