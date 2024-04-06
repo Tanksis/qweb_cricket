@@ -90,10 +90,6 @@
   font-size: 15px;
 }
 
-.umpires-info {
-  font-size: 15px;
-}
-
 .match-info-box {
   display: flex;
   align-items: center; /* Center items vertically */
@@ -102,6 +98,12 @@
   height: 80%;
   width: 800px;
   position: relative; /* Add position relative */
+}
+
+.result-info {
+  font-size: 25px; /* Adjust font size as needed */
+  font-weight: normal;
+  margin-bottom: 10px; /* Space before the scorecard button */
 }
 
 .match-info-buttons {
@@ -146,4 +148,71 @@
 
 .team-logos .vs-text {
   font-size: 24px;
+}
+
+/* Modal styles */
+.modal {
+  display: flex;
+  position: fixed;
+  z-index: 1000; /* High z-index to be on top of other content */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow-y: auto; /* Enable vertical scrolling */
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background for the overlay */
+  align-items: flex-start; /* Align to the top */
+  padding-top: 50px; /* Give some space from the top */
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  position: relative; /* For positioning the close button absolutely */
+  width: 80%; /* or max-width if you want to support very wide screens */
+  max-width: 600px; /* You can adjust max-width as necessary */
+  overflow-y: auto; /* Enable vertical scrolling within the modal content */
+  max-height: 80vh; /* Make the modal content max-height to 80% of the viewport height */
+}
+
+.close {
+  color: #aaa;
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Styles for the scorecard tables */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+  color: black;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+  color: black;
+}
+
+th {
+  background-color: #f2f2f2;
+  color: black;
+}
+h2,h3,h4{
+  color: black;
 }

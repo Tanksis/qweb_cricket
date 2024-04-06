@@ -3,7 +3,7 @@ import { MongoClient } from 'mongodb';
 import dotenv from 'dotenv';
 import faker from 'faker';
 
-dotenv.config({ path:'../../.env' });
+dotenv.config({ path:'../.env' });
 
 const uri = process.env.mongo_database;
 const dbName = 'QueensCricketDatabase';
