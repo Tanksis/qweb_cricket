@@ -1,0 +1,290 @@
+/* Add your CSS styles here */
+* {
+  color: white;
+  box-sizing: border-box;
+}
+.big-box-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.big-box {
+  display: flex;
+  flex-direction: column;
+  border: 2px solid #000000;
+  border-radius: 5px;
+  margin: 2px;
+  width: 83%;
+  height: 80%;
+  background-color: #58595b;
+}
+.match-schedule-container {
+  display: flex;
+  justify-content: center; /* Center items horizontally */
+  align-items: center;
+}
+
+.match-schedule-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 1%;
+}
+.team-logos-box {
+  border-radius: 1px;
+  border: #000000;
+  background-color: #002452;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.team-logos {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  margin: 10%;
+  margin-left: 15px; /* Adjust the margin */
+  margin-right: 15px; /* Adjust the margin */
+}
+
+.team-logo {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background-color: #b90e31;
+}
+
+.team-logos div:nth-child(2) {
+  font-size: 15px;
+  margin: 0 10px;
+}
+
+.match-info {
+  padding: 20px;
+  text-align: center;
+}
+
+.match-info-line {
+  margin-bottom: 10px;
+}
+
+.league-info {
+  font-size: 20px;
+}
+
+.teams-info {
+  font-style: italic;
+  font-weight: bolder;
+  font-size: 40px;
+}
+
+.round-info {
+  text-transform: uppercase;
+  font-size: 15px;
+}
+
+.ground-info {
+  font-size: 15px;
+}
+
+.match-info-box {
+  display: flex;
+  align-items: center; /* Center items vertically */
+  border: 2px transparent;
+  border-radius: 5px;
+  height: 80%;
+  width: 800px;
+  position: relative; /* Add position relative */
+}
+
+.result-info {
+  font-size: 25px; /* Adjust font size as needed */
+  font-weight: normal;
+  margin-bottom: 10px; /* Space before the scorecard button */
+}
+
+.match-info-buttons {
+  position: absolute; /* Position the buttons absolutely */
+  right: 20px; /* Align to the right */
+  top: 50%; /* Center vertically */
+  transform: translateY(-50%); /* Adjust for vertical centering */
+}
+
+.scorecard-button {
+  padding: 20px 40px;
+  font-size: 20px;
+  background-color: #fabd0f;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  width: 200px;
+}
+
+.match-line.day-of-week {
+  font-size: 25px;
+  text-align: center;
+}
+
+.match-line.date {
+  font-size: 550%;
+  font-weight: bold;
+  text-align: center;
+}
+
+.match-line.month {
+  font-size: 15px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.match-line.time {
+  font-size: 15px;
+  font-style: italic;
+  text-align: center;
+}
+
+.team-logos .vs-text {
+  font-size: 24px;
+}
+
+/* Modal styles */
+.modal {
+  display: flex;
+  position: fixed;
+  z-index: 1000; /* High z-index to be on top of other content */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow-y: auto; /* Enable vertical scrolling */
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background for the overlay */
+  align-items: flex-start; /* Align to the top */
+  padding-top: 50px; /* Give some space from the top */
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  position: relative; /* For positioning the close button absolutely */
+  width: 80%; /* or max-width if you want to support very wide screens */
+  max-width: 600px; /* You can adjust max-width as necessary */
+  overflow-y: auto; /* Enable vertical scrolling within the modal content */
+  max-height: 80vh; /* Make the modal content max-height to 80% of the viewport height */
+}
+
+.close {
+  color: #aaa;
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Styles for the scorecard tables */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+  color: black;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+  color: black;
+}
+
+th {
+  background-color: #f2f2f2;
+  color: black;
+}
+h2,h3,h4{
+  color: black;
+}
+
+/* Media queries for responsiveness */
+@media only screen and (max-width: 600px) {
+  .big-box {
+    width: 95%; /* Take up almost full width on smaller screens */
+    margin: 10px 0; /* More vertical margin for each match */
+    padding: 10px; /* Add some padding inside the boxes */
+  }
+
+  .match-schedule-container,
+  .team-logos-box,
+  .team-logos,
+  .match-info-box {
+    flex-direction: column; /* Stack elements vertically on small screens */
+  }
+
+  .team-logo {
+    width: 100px; /* Smaller logos on mobile */
+    height: 100px;
+  }
+
+  .match-info-line, .league-info, .teams-info, .round-info, .ground-info, .result-info {
+    font-size: 14px; /* Smaller text on mobile */
+  }
+
+  .match-info-buttons {
+    position: static; /* Undo absolute positioning on mobile */
+    margin-top: 10px; /* Space above the button */
+  }
+
+  .scorecard-button {
+    width: auto; /* Let the button size according to its content */
+    padding: 10px 20px; /* Smaller padding on mobile */
+  }
+
+  .modal-content {
+    width: 90%; /* Modal should take up most of the screen width on mobile */
+    max-height: none; /* Allow modal to take necessary height */
+  }
+  
+  .match-line.date {
+    font-size: 300%; /* Smaller date size on mobile */
+  }
+  
+  .team-logos .vs-text {
+    font-size: 18px; /* Smaller VS text on mobile */
+  }
+
+  table {
+    font-size: 12px; /* Smaller table text on mobile */
+  }
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 600px) {
+  .modal-content {
+    width: 85%; /* Slightly more margin on the smallest screens */
+    padding: 10px; /* Reduce padding to save space */
+  }
+
+  .modal {
+    padding-top: 10px; /* Less space on the very top on small screens */
+  }
+}
+
+/* Adjustments for medium screens, e.g., tablets */
+@media (min-width: 601px) and (max-width: 1024px) {
+  .modal-content {
+    max-width: 80%; /* Allow more space around the modal on larger but not wide screens */
+  }
+}

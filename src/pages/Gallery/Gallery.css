@@ -1,0 +1,126 @@
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 1px;
+}
+
+.Pictures {
+  flex-basis: calc(33.33% - 20px);
+  height: 200px;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+  border: 2px solid rgb(250, 189, 15); /* Add a gold border */
+}
+
+.Pictures img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.model {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: black;
+  transition: opacity 0.4s ease, visibility 0.4s ease,
+    transform 0.5s ease-in-out;
+  visibility: hidden;
+  opacity: 0;
+  transform: scale(0);
+  overflow: hidden;
+  z-index: 999;
+}
+
+.model.open {
+  visibility: visible;
+  opacity: 1;
+  transform: scale(1);
+}
+
+.model img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.close-button {
+  background-color: rgba(255, 255, 255, 0.5);
+  color: black;
+  border: none;
+  padding: 4px; /* Adjust padding as needed */
+  cursor: pointer;
+  position: absolute;
+  top: 10px; /* Adjust position as needed */
+  right: 30px; /* Adjust position as needed */
+  width: 24px; /* Set width and height to create a circle */
+  height: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem; /* Adjust font size as needed */
+  border-radius: 50%; /* Make the button a circle */
+  transition: background-color 0.3s;
+}
+
+.close-button:hover {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.fullscreen-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.next-button {
+  position: absolute;
+  top: 50%;
+  right: 5%;
+  width: 100px; /* Set width and height to create a circle */
+  height: 100px;
+  transform: translateY(-50%);
+  background-color: rgba(255, 255, 255, 0);
+  color: rgba(255, 255, 255, 0.685);
+  border: none;
+  padding: 1px;
+  cursor: pointer;
+  font-size: 3rem;
+  border-radius: 100%;
+  transition: background-color 0.3s;
+}
+
+.next-button:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+.prev-button {
+  position: absolute;
+  top: 50%;
+  left: 5%;
+  width: 100px; /* Set width and height to create a circle */
+  height: 100px;
+  transform: translateY(-50%);
+  background-color: rgba(255, 255, 255, 0);
+  color: rgba(255, 255, 255, 0.685);
+  border: none;
+  padding: 1px;
+  cursor: pointer;
+  font-size: 3rem;
+  border-radius: 100%;
+  transition: background-color 0.3s;
+}
+
+.prev-button:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+}
