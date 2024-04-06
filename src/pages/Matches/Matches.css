@@ -1,84 +1,149 @@
-.home-container {
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    background-image: url('src/assets/home_background.png');
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
+/* Add your CSS styles here */
+* {
+  color: white;
+}
+.big-box-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(51, 51, 51, 0.7);
+.big-box {
+  display: flex;
+  flex-direction: column;
+  border: 2px solid #000000;
+  border-radius: 5px;
+  margin: 2px;
+  width: 83%;
+  height: 80%;
+  background-color: #58595b;
+}
+.match-schedule-container {
+  display: flex;
+  justify-content: center; /* Center items horizontally */
+  align-items: center;
 }
 
-.content {
-    position: relative;
-    z-index: 1;
-    width: 100%;
-    max-width: 956px;
-    box-sizing: border-box;
-    padding: 32px;
-    text-align: center;
+.match-schedule-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 1%;
+}
+.team-logos-box {
+  border-radius: 1px;
+  border: #000000;
+  background-color: #002452;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
 }
 
-.title {
-    display: block;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 6vw;
-    letter-spacing: 2px;
-    text-transform: none;
-    line-height: 1.1em;
-    color: #f1f2f2;
+.team-logos {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  margin: 10%;
+  margin-left: 15px; /* Adjust the margin */
+  margin-right: 15px; /* Adjust the margin */
 }
 
-.intro {
-    font-family: "Helvetica Neue", "Arial", "sans-serif";
-    font-weight: 400;
-    font-style: normal;
-    font-size: 1.5vw;
-    letter-spacing: 4px;
-    text-transform: uppercase;
-    line-height: 1.3em;
-    color: #d1d3d4;
-    margin: 20px auto;
+.team-logo {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background-color: #b90e31;
 }
 
-.reg-box {
-    display:flex;
-   flex-direction: row;
-    justify-content: space-between;
-    padding: 0 20px;
-    padding-bottom: 10px;
-    margin: 0 auto;
+.team-logos div:nth-child(2) {
+  font-size: 15px;
+  margin: 0 10px;
 }
 
-.reg-box > * {
-    margin-bottom: 10px; /* Add space between items on mobile */
+.match-info {
+  padding: 20px;
+  text-align: center;
 }
 
-@media (max-width: 600px) {
-    .title {
-        font-size: 32px; 
-    }
+.match-info-line {
+  margin-bottom: 10px;
+}
 
-    .intro {
-        font-size: 16px; 
-    }
+.league-info {
+  font-size: 20px;
+}
 
-    .reg-box {
-        flex-direction: column; /* Arrange items horizontally on larger screens */
-        justify-content: center;
-    
-    }
+.teams-info {
+  font-style: italic;
+  font-weight: bolder;
+  font-size: 40px;
+}
 
+.round-info {
+  text-transform: uppercase;
+  font-size: 15px;
+}
+
+.ground-info {
+  font-size: 15px;
+}
+
+.umpires-info {
+  font-size: 15px;
+}
+
+.match-info-box {
+  display: flex;
+  align-items: center; /* Center items vertically */
+  border: 2px transparent;
+  border-radius: 5px;
+  height: 80%;
+  width: 800px;
+  position: relative; /* Add position relative */
+}
+
+.match-info-buttons {
+  position: absolute; /* Position the buttons absolutely */
+  right: 20px; /* Align to the right */
+  top: 50%; /* Center vertically */
+  transform: translateY(-50%); /* Adjust for vertical centering */
+}
+
+.scorecard-button {
+  padding: 20px 40px;
+  font-size: 20px;
+  background-color: #fabd0f;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  width: 200px;
+}
+
+.match-line.day-of-week {
+  font-size: 25px;
+  text-align: center;
+}
+
+.match-line.date {
+  font-size: 550%;
+  font-weight: bold;
+  text-align: center;
+}
+
+.match-line.month {
+  font-size: 15px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.match-line.time {
+  font-size: 15px;
+  font-style: italic;
+  text-align: center;
+}
+
+.team-logos .vs-text {
+  font-size: 24px;
 }
